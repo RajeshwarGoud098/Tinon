@@ -35,7 +35,7 @@ export default function SkillSelector({ selectedSkills = [], onToggle }) {
                   transition-all duration-250
                   ${isSelected
                     ? "bg-white/20 text-white scale-100"
-                    : "bg-white/[0.04] border border-white/[0.08] text-transparent scale-90"
+                    : "bg-black/[0.04] border border-black/[0.08] text-transparent scale-90"
                   }
                 `}
               >

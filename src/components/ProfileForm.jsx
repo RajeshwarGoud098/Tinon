@@ -75,7 +75,7 @@ export default function ProfileForm() {
       <div className="relative w-full max-w-[480px] max-h-[90vh] bg-background rounded-t-2xl border-t border-x border-border overflow-hidden animate-slide-up">
         {/* Handle */}
         <div className="flex justify-center pt-3 pb-2">
-          <div className="w-9 h-[3px] rounded-full bg-white/10" />
+          <div className="w-9 h-[3px] rounded-full bg-black/10" />
         </div>
 
         {/* Close */}
@@ -163,8 +163,8 @@ export default function ProfileForm() {
                         px-3 py-[6px] rounded-lg text-[11px] font-medium
                         transition-all duration-200 cursor-pointer active:scale-[0.94]
                         ${selected
-                          ? "bg-primary text-white shadow-sm shadow-red-900/20"
-                          : "bg-surface text-text-secondary border border-border hover:border-white/12"
+                          ? "bg-primary text-white shadow-sm shadow-orange-900/20"
+                          : "bg-surface text-text-secondary border border-border hover:border-orange-300"
                         }
                       `}
                     >
@@ -229,7 +229,7 @@ export default function ProfileForm() {
                 w-full py-3 rounded-xl bg-primary text-white
                 font-semibold text-[13px] flex items-center justify-center gap-2
                 cursor-pointer select-none active:scale-[0.97] transition-transform mt-2
-                shadow-lg shadow-red-900/15
+                shadow-lg shadow-orange-900/15
               "
             >
               <Sparkles size={13} />

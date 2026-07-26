@@ -31,8 +31,8 @@ export default function SearchBar() {
           id="search-clear"
           onClick={() => setSearchQuery("")}
           className="
-            w-[18px] h-[18px] rounded-full bg-white/8 flex items-center justify-center
-            text-text-muted hover:text-text-primary hover:bg-white/12
+            w-[18px] h-[18px] rounded-full bg-black/8 flex items-center justify-center
+            text-text-muted hover:text-text-primary hover:bg-black/12
             transition-all duration-200 cursor-pointer shrink-0
             active:scale-90
           "

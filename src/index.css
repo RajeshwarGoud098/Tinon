@@ -1,25 +1,25 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #D94040;
-  --color-primary-light: #E8605A;
-  --color-primary-dark: #B22D2D;
-  --color-accent: #D94040;
-  --color-accent-light: #E8605A;
+  --color-primary: #F97316;
+  --color-primary-light: #FB923C;
+  --color-primary-dark: #EA580C;
+  --color-accent: #F97316;
+  --color-accent-light: #FB923C;
   --color-success: #2EBD6B;
   --color-success-dark: #1E9E56;
-  --color-surface: #161616;
-  --color-surface-light: #1E1E1E;
-  --color-surface-elevated: #242424;
-  --color-background: #0C0C0C;
-  --color-background-light: #121212;
-  --color-text-primary: #ECECEA;
-  --color-text-secondary: #918F8A;
-  --color-text-muted: #5A5854;
-  --color-border: rgba(255, 255, 255, 0.07);
-  --color-border-light: rgba(255, 255, 255, 0.09);
-  --color-glass: rgba(12, 12, 12, 0.92);
-  --color-glass-light: rgba(22, 22, 22, 0.88);
+  --color-surface: #FFFFFF;
+  --color-surface-light: #F5F5F4;
+  --color-surface-elevated: #FAFAF9;
+  --color-background: #FAFAF9;
+  --color-background-light: #F5F5F4;
+  --color-text-primary: #1C1917;
+  --color-text-secondary: #57534E;
+  --color-text-muted: #A8A29E;
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-border-light: rgba(0, 0, 0, 0.06);
+  --color-glass: rgba(255, 255, 255, 0.92);
+  --color-glass-light: rgba(255, 255, 255, 0.88);
   --color-whatsapp: #25D366;
   --color-status-applied: #E4B944;
   --color-status-reviewed: #5B9AE8;
@@ -45,8 +45,8 @@
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 8px rgba(217, 64, 64, 0.2); }
-  50% { box-shadow: 0 0 18px rgba(217, 64, 64, 0.35); }
+  0%, 100% { box-shadow: 0 0 8px rgba(249, 115, 22, 0.2); }
+  50% { box-shadow: 0 0 18px rgba(249, 115, 22, 0.35); }
 }
 
 @keyframes shimmer {
@@ -96,7 +96,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #0C0C0C;
+  background-color: #FAFAF9;
   color: var(--color-text-primary);
   font-family: var(--font-sans);
   overflow-x: hidden;
@@ -114,12 +114,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.12);
   border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 /* ── Glass ──────────────────────────────────────────── */
@@ -146,8 +146,8 @@ body {
 
 .card-hover:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.4);
-  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.12);
 }
 
 .card-hover:active {
@@ -157,11 +157,11 @@ body {
 /* ── Gradients ──────────────────────────────────────── */
 
 .gradient-primary {
-  background: linear-gradient(135deg, #D94040 0%, #B22D2D 100%);
+  background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
 }
 
 .gradient-accent {
-  background: linear-gradient(135deg, #E8605A 0%, #D94040 100%);
+  background: linear-gradient(135deg, #FB923C 0%, #F97316 100%);
 }
 
 .gradient-whatsapp {
@@ -169,23 +169,23 @@ body {
 }
 
 .gradient-surface {
-  background: linear-gradient(180deg, #161616 0%, #121212 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, #F5F5F4 100%);
 }
 
 /* ── Map ────────────────────────────────────────────── */
 
 .map-gradient {
   background:
-    radial-gradient(ellipse at 25% 35%, rgba(217, 64, 64, 0.06) 0%, transparent 55%),
-    radial-gradient(ellipse at 75% 65%, rgba(217, 64, 64, 0.03) 0%, transparent 45%),
-    radial-gradient(ellipse at 50% 50%, rgba(30, 30, 30, 0.5) 0%, transparent 70%),
-    linear-gradient(175deg, #181818 0%, #0C0C0C 100%);
+    radial-gradient(ellipse at 25% 35%, rgba(249, 115, 22, 0.06) 0%, transparent 55%),
+    radial-gradient(ellipse at 75% 65%, rgba(249, 115, 22, 0.03) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 50%, rgba(245, 245, 244, 0.5) 0%, transparent 70%),
+    linear-gradient(175deg, #FFFFFF 0%, #FAFAF9 100%);
 }
 
 .map-grid {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
   background-size: 36px 36px;
 }
 
@@ -201,18 +201,18 @@ body {
   background: var(--color-primary);
   color: #FFFFFF;
   font-weight: 600;
-  box-shadow: 0 2px 8px -2px rgba(217, 64, 64, 0.35);
+  box-shadow: 0 2px 8px -2px rgba(249, 115, 22, 0.35);
 }
 
 .pill-inactive {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(0, 0, 0, 0.02);
   color: var(--color-text-secondary);
   border: 1px solid var(--color-border-light);
 }
 
 .pill-inactive:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.12);
   color: var(--color-text-primary);
 }
 
@@ -233,8 +233,8 @@ body {
 
 input:focus, textarea:focus, select:focus {
   outline: none;
-  border-color: rgba(217, 64, 64, 0.35);
-  box-shadow: 0 0 0 3px rgba(217, 64, 64, 0.08);
+  border-color: rgba(249, 115, 22, 0.35);
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.08);
 }
 
 /* ── Search Bar ─────────────────────────────────────── */
@@ -244,10 +244,10 @@ input:focus, textarea:focus, select:focus {
 }
 
 .search-bar:focus-within {
-  border-color: rgba(217, 64, 64, 0.35);
-  box-shadow: 0 0 0 3px rgba(217, 64, 64, 0.06),
-              0 4px 12px -4px rgba(0, 0, 0, 0.3);
-  background-color: #1E1E1E;
+  border-color: rgba(249, 115, 22, 0.35);
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.06),
+              0 4px 12px -4px rgba(0, 0, 0, 0.08);
+  background-color: #FFFFFF;
 }
 
 /* ── Drawer ─────────────────────────────────────────── */
@@ -288,13 +288,13 @@ input:focus, textarea:focus, select:focus {
 }
 
 .skill-pill-inactive {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(0, 0, 0, 0.02);
   color: var(--color-text-secondary);
   border: 1px solid var(--color-border-light);
 }
 
 .skill-pill-inactive:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.04);
   border-color: rgba(16, 185, 129, 0.18);
   color: var(--color-text-primary);
 }
@@ -349,9 +349,9 @@ input:focus, textarea:focus, select:focus {
 
 .job-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.5),
-              0 0 0 1px rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.1),
+              0 0 0 1px rgba(249, 115, 22, 0.12);
+  border-color: rgba(249, 115, 22, 0.2);
 }
 
 .job-card:active {
@@ -373,15 +373,15 @@ input:focus, textarea:focus, select:focus {
   align-items: center;
   justify-content: center;
   font-size: 22px;
-  background: linear-gradient(135deg, rgba(233, 30, 120, 0.12), rgba(233, 30, 120, 0.04));
-  border: 1px solid rgba(233, 30, 120, 0.15);
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.12), rgba(249, 115, 22, 0.04));
+  border: 1px solid rgba(249, 115, 22, 0.15);
   border-radius: 12px;
   flex-shrink: 0;
 }
 
 /* Hiring Now Badge */
 .job-card__badge {
-  background: #E91E78;
+  background: #F97316;
   color: #FFFFFF;
   font-size: 10px;
   font-weight: 700;
@@ -390,13 +390,13 @@ input:focus, textarea:focus, select:focus {
   line-height: 1;
   text-transform: uppercase;
   border-radius: 8px;
-  box-shadow: 0 4px 12px -2px rgba(233, 30, 120, 0.45);
+  box-shadow: 0 4px 12px -2px rgba(249, 115, 22, 0.45);
   animation: pulse-badge 2.5s ease-in-out infinite;
 }
 
 @keyframes pulse-badge {
-  0%, 100% { box-shadow: 0 4px 12px -2px rgba(233, 30, 120, 0.45); }
-  50% { box-shadow: 0 4px 20px -2px rgba(233, 30, 120, 0.65); }
+  0%, 100% { box-shadow: 0 4px 12px -2px rgba(249, 115, 22, 0.45); }
+  50% { box-shadow: 0 4px 20px -2px rgba(249, 115, 22, 0.65); }
 }
 
 /* Card Body */
@@ -419,7 +419,7 @@ input:focus, textarea:focus, select:focus {
   margin: 0;
 }
 
-/* Business name with pink accent border */
+/* Business name with orange accent border */
 .job-card__business {
   display: flex;
   align-items: center;
@@ -430,11 +430,11 @@ input:focus, textarea:focus, select:focus {
 .job-card__business-text {
   font-size: 12px;
   font-weight: 600;
-  color: #E91E78;
+  color: #F97316;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   padding-left: 10px;
-  border-left: 3px solid #E91E78;
+  border-left: 3px solid #F97316;
   line-height: 1;
 }
 
@@ -476,7 +476,7 @@ input:focus, textarea:focus, select:focus {
   font-size: 10px;
   font-weight: 500;
   color: var(--color-text-secondary);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(0, 0, 0, 0.03);
   border: 1px solid var(--color-border-light);
   border-radius: 6px;
   padding: 3px 8px;

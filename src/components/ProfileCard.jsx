@@ -22,7 +22,7 @@ export default function ProfileCard() {
             px-6 py-3 rounded-xl bg-primary text-white
             font-semibold text-[13px] flex items-center gap-2
             cursor-pointer select-none active:scale-[0.96] transition-transform
-            shadow-lg shadow-red-900/15
+            shadow-lg shadow-orange-900/15
           "
         >
           <Edit3 size={13} />

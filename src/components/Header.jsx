@@ -17,7 +17,7 @@ export default function Header() {
             <span className="text-[15px] font-bold tracking-[-0.03em] text-text-primary">
               tinon
             </span>
-            <div className="h-3.5 w-px bg-white/8 hidden sm:block" />
+            <div className="h-3.5 w-px bg-black/10 hidden sm:block" />
             <div className="flex items-center gap-1 text-text-muted text-[11px]">
               <MapPin size={10} className="text-primary/70" />
               <span className="font-medium">Adilabad</span>
@@ -41,7 +41,7 @@ export default function Header() {
                     transition-all duration-200 cursor-pointer select-none
                     ${isActive
                       ? "text-primary bg-primary/[0.08]"
-                      : "text-text-muted hover:text-text-secondary hover:bg-white/[0.03]"
+                      : "text-text-muted hover:text-text-secondary hover:bg-black/[0.04]"
                     }
                   `}
                 >

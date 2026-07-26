@@ -45,7 +45,7 @@ export default function JobDetailDrawer() {
       >
         {/* Handle */}
         <div className="flex justify-center pt-3 pb-2">
-          <div className="w-9 h-[3px] rounded-full bg-white/10" />
+          <div className="w-9 h-[3px] rounded-full bg-black/10" />
         </div>
 
         {/* Close */}
