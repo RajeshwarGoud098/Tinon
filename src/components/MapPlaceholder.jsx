@@ -36,18 +36,18 @@ export default function MapPlaceholder() {
           title={job.business}
         >
           <div className="flex flex-col items-center -translate-x-1/2 -translate-y-1/2">
-            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-surface-light border border-border-light flex items-center justify-center text-sm sm:text-base shadow-lg shadow-black/30">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-[#24242B] border border-white/20 flex items-center justify-center text-sm sm:text-base shadow-lg shadow-black/50">
               {job.emoji}
             </div>
-            <div className="w-1 h-1 bg-primary/70 rounded-full mt-px" />
+            <div className="w-1.5 h-1.5 bg-primary rounded-full mt-px shadow-sm shadow-primary/80" />
           </div>
         </button>
       ))}
 
       {/* Jobs count badge */}
-      <div className="absolute bottom-2.5 right-2.5 flex items-center gap-1.5 bg-surface/85 rounded-lg px-2.5 py-1 border border-border backdrop-blur-sm">
-        <div className="w-1 h-1 rounded-full bg-primary/80" />
-        <span className="text-[10px] text-text-secondary font-medium">
+      <div className="absolute bottom-2.5 right-2.5 flex items-center gap-1.5 bg-black/80 rounded-lg px-2.5 py-1 border border-white/15 backdrop-blur-sm">
+        <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+        <span className="text-[10px] text-stone-200 font-medium">
           {filteredJobs.length} nearby
         </span>
       </div>

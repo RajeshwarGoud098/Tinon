@@ -35,6 +35,9 @@ export default function JobCard({ job, index = 0 }) {
         {/* Pay */}
         <div className="job-card__pay">{job.pay}</div>
 
+        {/* Job Description */}
+        <p className="job-card__description">{job.description}</p>
+
         {/* Meta row */}
         <div className="job-card__meta">
           <div className="job-card__meta-item">
