@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useCallback, useEffect, useMemo } from "react";
-import { defaultProfile } from "../data/mockData";
+import { jobs as defaultJobs, defaultProfile } from "../data/mockData";
 import {
   fetchJobs as apiFetchJobs,
   createProfile as apiCreateProfile,
@@ -32,9 +32,9 @@ export function AppProvider({ children }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [showProfileForm, setShowProfileForm] = useState(false);
 
-  // ── Jobs from API ─────────────────────────────────────
-  const [jobs, setJobs] = useState([]);
-  const [jobsLoading, setJobsLoading] = useState(true);
+  // ── Jobs from API (with fallback to defaultJobs) ──────
+  const [jobs, setJobs] = useState(defaultJobs);
+  const [jobsLoading, setJobsLoading] = useState(false);
   const [jobsError, setJobsError] = useState(null);
 
   // ── Profile (restored from localStorage if available) ─
@@ -50,7 +50,7 @@ export function AppProvider({ children }) {
   const [skillMatchActive, setSkillMatchActive] = useState(false);
   const [skillMatchTooltip, setSkillMatchTooltip] = useState(false);
 
-  // ── Load jobs from API on mount ───────────────────────
+  // ── Load jobs from API on mount (fallback to mockData) ─
   useEffect(() => {
     let cancelled = false;
     async function loadJobs() {
@@ -58,9 +58,18 @@ export function AppProvider({ children }) {
         setJobsLoading(true);
         setJobsError(null);
         const data = await apiFetchJobs();
-        if (!cancelled) setJobs(data);
+        if (!cancelled) {
+          if (Array.isArray(data) && data.length > 0) {
+            setJobs(data);
+          } else {
+            setJobs(defaultJobs);
+          }
+        }
       } catch (err) {
-        if (!cancelled) setJobsError(err.message);
+        console.warn("API fetch failed, falling back to mock jobs:", err.message);
+        if (!cancelled) {
+          setJobs(defaultJobs);
+        }
       } finally {
         if (!cancelled) setJobsLoading(false);
       }
