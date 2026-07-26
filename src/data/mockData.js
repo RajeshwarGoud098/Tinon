@@ -190,6 +190,10 @@ export const defaultProfile = {
   languages: [],
   skills: [],
   availability: "",
+  education: "",
+  educationYear: "",
+  degreeName: "",
+  degreeCertificateName: "",
   experience: "",
 };
 

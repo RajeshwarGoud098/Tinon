@@ -1,4 +1,4 @@
-import { Edit3, Globe, Clock, Briefcase, Zap } from "lucide-react";
+import { Edit3, Globe, Clock, Briefcase, GraduationCap, Award } from "lucide-react";
 import { useApp } from "../context/AppContext";
 import { SKILL_OPTIONS } from "../data/mockData";
 
@@ -39,6 +39,14 @@ export default function ProfileCard() {
     .toUpperCase()
     .slice(0, 2);
 
+  const educationText = [
+    profile.education,
+    profile.educationYear,
+    profile.degreeName,
+  ]
+    .filter(Boolean)
+    .join(" · ");
+
   return (
     <div className="py-4 max-w-[480px] mx-auto lg:max-w-[560px]">
       <div className="relative bg-surface border border-border rounded-2xl overflow-hidden animate-scale-in">
@@ -67,7 +75,7 @@ export default function ProfileCard() {
             {profile.fullName}
           </h2>
           <p className="text-[11px] text-text-muted mt-0.5">
-            Age {profile.age} · Student
+            Age {profile.age} {educationText ? `· ${profile.education || "Student"}` : "· Candidate"}
           </p>
 
           {/* Languages */}
@@ -92,7 +100,7 @@ export default function ProfileCard() {
                 return (
                   <span
                     key={skillId}
-                    className="flex items-center gap-1 text-[10px] text-emerald-300/90 bg-emerald-500/[0.08] rounded-lg px-2.5 py-1 border border-emerald-500/15"
+                    className="flex items-center gap-1 text-[10px] text-emerald-600 bg-emerald-500/[0.08] rounded-lg px-2.5 py-1 border border-emerald-500/15"
                   >
                     <span className="text-[11px] leading-none">{skill.emoji}</span>
                     {skill.label}
@@ -104,31 +112,53 @@ export default function ProfileCard() {
 
           {/* Info cards */}
           <div className="mt-4 space-y-2 text-left">
-            <div className="flex items-start gap-2.5 bg-surface-light/50 rounded-xl px-3.5 py-2.5 border border-border">
-              <Clock size={11} className="text-primary/70 mt-0.5 shrink-0" strokeWidth={1.5} />
-              <div>
-                <p className="text-[9px] text-text-muted uppercase tracking-[0.08em]">
-                  Availability
-                </p>
-                <p className="text-[12px] text-text-primary mt-0.5">
-                  {profile.availability}
-                </p>
+            {/* Education Info */}
+            {profile.education && (
+              <div className="flex items-start gap-2.5 bg-surface-light/50 rounded-xl px-3.5 py-2.5 border border-border">
+                <GraduationCap size={13} className="text-primary mt-0.5 shrink-0" strokeWidth={1.5} />
+                <div className="flex-1 min-w-0">
+                  <p className="text-[9px] text-text-muted uppercase tracking-[0.08em]">
+                    Education
+                  </p>
+                  <p className="text-[12px] text-text-primary mt-0.5 font-medium">
+                    {educationText}
+                  </p>
+                  {profile.degreeCertificateName && (
+                    <span className="inline-flex items-center gap-1 text-[9px] font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md mt-1 border border-emerald-200">
+                      <Award size={10} /> Degree Certificate Verified
+                    </span>
+                  )}
+                </div>
               </div>
-            </div>
+            )}
 
+            {/* Experience Info */}
             {profile.experience && (
               <div className="flex items-start gap-2.5 bg-surface-light/50 rounded-xl px-3.5 py-2.5 border border-border">
-                <Briefcase size={11} className="text-primary/70 mt-0.5 shrink-0" strokeWidth={1.5} />
+                <Briefcase size={13} className="text-primary mt-0.5 shrink-0" strokeWidth={1.5} />
                 <div>
                   <p className="text-[9px] text-text-muted uppercase tracking-[0.08em]">
-                    Experience
+                    Experience Level
                   </p>
-                  <p className="text-[12px] text-text-primary mt-0.5">
+                  <p className="text-[12px] text-text-primary mt-0.5 font-medium">
                     {profile.experience}
                   </p>
                 </div>
               </div>
             )}
+
+            {/* Availability Info */}
+            <div className="flex items-start gap-2.5 bg-surface-light/50 rounded-xl px-3.5 py-2.5 border border-border">
+              <Clock size={13} className="text-primary mt-0.5 shrink-0" strokeWidth={1.5} />
+              <div>
+                <p className="text-[9px] text-text-muted uppercase tracking-[0.08em]">
+                  Availability
+                </p>
+                <p className="text-[12px] text-text-primary mt-0.5 font-medium">
+                  {profile.availability}
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Status */}
