@@ -6,22 +6,14 @@ export default function JobCard({ job, index = 0 }) {
 
   return (
     <button
-      id={`job-card-${job.id}`}
+      id={`job-card-${job._id || job.id}`}
       onClick={() => openJobDetail(job)}
       className="job-card animate-fade-in"
       style={{ animationDelay: `${index * 80}ms` }}
     >
-      {/* Hero Image */}
-      <div className="job-card__image-wrapper">
-        <img
-          src={job.image}
-          alt={job.type}
-          className="job-card__image"
-          loading="lazy"
-        />
-        {/* Gradient overlay for depth */}
-        <div className="job-card__image-overlay" />
-
+      {/* Card Body */}
+      <div className="job-card__header">
+        <span className="job-card__emoji">{job.emoji}</span>
         {/* Hiring Now Badge */}
         {job.immediate && (
           <span className="job-card__badge">
