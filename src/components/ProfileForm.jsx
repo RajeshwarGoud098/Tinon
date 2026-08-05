@@ -185,8 +185,8 @@ export default function ProfileForm() {
                         px-3 py-2 rounded-xl text-[11px] font-medium text-left
                         transition-all duration-200 cursor-pointer active:scale-[0.96]
                         ${selected
-                          ? "bg-primary text-white shadow-sm shadow-orange-900/20"
-                          : "bg-surface text-text-secondary border border-border hover:border-orange-300"
+                          ? "bg-primary text-white shadow-sm shadow-red-900/20"
+                          : "bg-surface text-text-secondary border border-border hover:border-primary/30"
                         }
                       `}
                     >
@@ -260,7 +260,7 @@ export default function ProfileForm() {
                       />
                     </label>
                     {formData.degreeCertificateName && (
-                      <div className="flex items-center gap-1 text-[10px] text-emerald-600 font-medium mt-1">
+                      <div className="flex items-center gap-1 text-[10px] text-success font-medium mt-1">
                         <CheckCircle size={11} />
                         Certificate attached: {formData.degreeCertificateName}
                       </div>
@@ -287,8 +287,8 @@ export default function ProfileForm() {
                         px-3 py-[6px] rounded-lg text-[11px] font-medium
                         transition-all duration-200 cursor-pointer active:scale-[0.94]
                         ${selected
-                          ? "bg-primary text-white shadow-sm shadow-orange-900/20"
-                          : "bg-surface text-text-secondary border border-border hover:border-orange-300"
+                          ? "bg-primary text-white shadow-sm shadow-red-900/20"
+                          : "bg-surface text-text-secondary border border-border hover:border-primary/30"
                         }
                       `}
                     >
@@ -326,8 +326,8 @@ export default function ProfileForm() {
                         px-2.5 py-2 rounded-xl text-[11px] font-medium text-center
                         transition-all duration-200 cursor-pointer active:scale-[0.95]
                         ${selected
-                          ? "bg-primary text-white font-semibold shadow-sm shadow-orange-900/20"
-                          : "bg-surface text-text-secondary border border-border hover:border-orange-300"
+                          ? "bg-primary text-white font-semibold shadow-sm shadow-red-900/20"
+                          : "bg-surface text-text-secondary border border-border hover:border-primary/30"
                         }
                       `}
                     >
@@ -366,7 +366,7 @@ export default function ProfileForm() {
                 w-full py-3 rounded-xl bg-primary text-white
                 font-semibold text-[13px] flex items-center justify-center gap-2
                 cursor-pointer select-none active:scale-[0.97] transition-transform mt-2
-                shadow-lg shadow-orange-900/15
+                shadow-lg shadow-red-900/15
               "
             >
               <Sparkles size={13} />

@@ -36,7 +36,7 @@ export default function MapPlaceholder() {
           title={job.business}
         >
           <div className="flex flex-col items-center -translate-x-1/2 -translate-y-1/2">
-            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-[#24242B] border border-white/20 flex items-center justify-center text-sm sm:text-base shadow-lg shadow-black/50">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-[#2A1A1A] border border-white/20 flex items-center justify-center text-sm sm:text-base shadow-lg shadow-black/50">
               {job.emoji}
             </div>
             <div className="w-1.5 h-1.5 bg-primary rounded-full mt-px shadow-sm shadow-primary/80" />

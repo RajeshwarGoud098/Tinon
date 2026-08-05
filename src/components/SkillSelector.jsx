@@ -5,7 +5,7 @@ export default function SkillSelector({ selectedSkills = [], onToggle }) {
   return (
     <div>
       <label className="flex items-center gap-1.5 text-[10px] font-medium text-text-muted uppercase tracking-[0.08em] mb-2">
-        <Zap size={10} className="text-emerald-400/70" />
+        <Zap size={10} className="text-primary/60" />
         Your Skills
       </label>
 
@@ -74,8 +74,8 @@ export default function SkillSelector({ selectedSkills = [], onToggle }) {
       </div>
 
       {selectedSkills.length > 0 && (
-        <p className="text-[10px] text-emerald-400/60 mt-2 flex items-center gap-1">
-          <span className="w-1 h-1 rounded-full bg-emerald-400/50 animate-pulse" />
+        <p className="text-[10px] text-primary/60 mt-2 flex items-center gap-1">
+          <span className="w-1 h-1 rounded-full bg-primary/50 animate-pulse" />
           {selectedSkills.length} skill{selectedSkills.length > 1 ? "s" : ""} selected
           — matching jobs will highlight
         </p>

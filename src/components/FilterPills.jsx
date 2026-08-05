@@ -63,7 +63,7 @@ export default function FilterPills() {
                   setSkillMatchTooltip(false);
                   setActiveTab("profile");
                 }}
-                className="text-emerald-400 font-semibold underline underline-offset-2 cursor-pointer hover:text-emerald-300 transition-colors"
+                className="text-primary font-semibold underline underline-offset-2 cursor-pointer hover:text-primary-dark transition-colors"
               >
                 Profile tab
               </button>{" "}

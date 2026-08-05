@@ -84,7 +84,7 @@ export default function JobDetailDrawer() {
               <Clock size={12} strokeWidth={1.5} />
               {selectedJob.timings}
             </div>
-            <div className="bg-primary/[0.08] rounded-lg px-3 py-2 text-[12px] font-semibold text-primary">
+            <div className="bg-primary/[0.08] rounded-lg px-3 py-2 text-[12px] font-semibold text-primary border border-primary/15">
               {selectedJob.pay}
             </div>
           </div>

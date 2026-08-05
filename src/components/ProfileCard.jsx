@@ -22,7 +22,7 @@ export default function ProfileCard() {
             px-6 py-3 rounded-xl bg-primary text-white
             font-semibold text-[13px] flex items-center gap-2
             cursor-pointer select-none active:scale-[0.96] transition-transform
-            shadow-lg shadow-orange-900/15
+            shadow-lg shadow-red-900/15
           "
         >
           <Edit3 size={13} />
@@ -100,7 +100,7 @@ export default function ProfileCard() {
                 return (
                   <span
                     key={skillId}
-                    className="flex items-center gap-1 text-[10px] text-emerald-600 bg-emerald-500/[0.08] rounded-lg px-2.5 py-1 border border-emerald-500/15"
+                    className="flex items-center gap-1 text-[10px] text-primary bg-primary/[0.07] rounded-lg px-2.5 py-1 border border-primary/15"
                   >
                     <span className="text-[11px] leading-none">{skill.emoji}</span>
                     {skill.label}
@@ -124,7 +124,7 @@ export default function ProfileCard() {
                     {educationText}
                   </p>
                   {profile.degreeCertificateName && (
-                    <span className="inline-flex items-center gap-1 text-[9px] font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md mt-1 border border-emerald-200">
+                    <span className="inline-flex items-center gap-1 text-[9px] font-medium text-primary bg-primary/[0.07] px-2 py-0.5 rounded-md mt-1 border border-primary/15">
                       <Award size={10} /> Degree Certificate Verified
                     </span>
                   )}
